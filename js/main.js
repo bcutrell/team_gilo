@@ -1,18 +1,9 @@
+// http://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587
+// http://vnjs.net/www/project/freewall/
+
 $( document ).ready(function() {
   var img_list =
     [{ 
-      path: 'big_house.jpg',
-      size: '663x432'
-    },
-    { 
-      path: 'cake.jpg',
-      size: '539x960'
-    },
-    { 
-      path: 'gino_logo.jpg',
-      size: '612x612'
-    },
-    { 
       path: 'hug_thumbs_up.jpg',
       size: '640x960'
     },
@@ -27,6 +18,18 @@ $( document ).ready(function() {
     { 
       path: 'she_said_yes.jpg',
       size: '640x960'
+    },
+    { 
+      path: 'cake.jpg',
+      size: '539x960'
+    },
+    { 
+      path: 'gino_logo.jpg',
+      size: '612x612'
+    },
+    { 
+      path: 'big_house.jpg',
+      size: '663x432'
     }]
 
   $.each(img_list, function(idx, figure) {
@@ -34,7 +37,6 @@ $( document ).ready(function() {
   var size = figure.size;
 
   var figure_html = 
-    // "<div class='my-gallery'>" +
     "<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" +
     "<a href=img/" + path +
     " itemprop='contentUrl' data-size=" + size +
@@ -44,13 +46,6 @@ $( document ).ready(function() {
     "</a>" +
     "<figcaption itemprop='caption description'></figcaption>" +
     "</figure>"
-    // + "</div>"
-
-    // if (idx > 3) {
-    //   $('.gallery-row-2').append(figure_html);
-    // } else {
-    //   $('.gallery-row-1').append(figure_html);  
-    // }
 
     $('.my-gallery').append(figure_html);  
   })

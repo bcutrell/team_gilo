@@ -37,12 +37,12 @@ $( document ).ready(function() {
   var size = figure.size;
 
   var figure_html = 
-    "<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" +
+    "<figure class='brick' itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" +
     "<a href=img/" + path +
     " itemprop='contentUrl' data-size=" + size +
     ">" +
     "<img src=img/" + path +
-    " class='img-responsive img-thumbnail brick' itemprop='thumbnail' alt='Image description' />" +
+    " class='img-responsive img-thumbnail' itemprop='thumbnail' alt='Image description' />" +
     "</a>" +
     "<figcaption itemprop='caption description'></figcaption>" +
     "</figure>"
@@ -54,7 +54,7 @@ $( document ).ready(function() {
   initPhotoSwipeFromDOM('.my-gallery');
 
   var wall = new Freewall('.my-gallery');
-  // wall.fitWidth();
+  wall.fitWidth();
 
   wall.reset({
     selector: '.brick',
@@ -63,14 +63,16 @@ $( document ).ready(function() {
     cellH: 'auto',
     gutterY: 0,
     gutterX: 0,
-      onResize: function() {
-      wall.fitWidth();
+    onResize: function() {
+        wall.fitWidth();
     }
   });
+  
   var images = wall.container.find('.brick');
     images.find('img').load(function() {
       wall.fitWidth();
     });
+
 });
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {

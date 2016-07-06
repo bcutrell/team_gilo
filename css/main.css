@@ -25,20 +25,21 @@ body {
 
 .my-gallery {
   width: 100%;
-  float: left;
+  margin: auto;
 }
 
 .my-gallery img {
   width: 100%;
   height: auto;
+  display: block;
+
 }
 
 .my-gallery figure {
-  display: block;
-  float: left;
   margin: 0 5px 5px 0;
-  width: 350px;
+  width: 300px;
 }
+
 .my-gallery figcaption {
   display: none;
 }

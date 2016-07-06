@@ -10,54 +10,54 @@ $( document ).ready(function() {
     },
     { 
       path: 'gino_logo.jpg',
-      size: '663x432'
+      size: '612x612'
     },
     { 
       path: 'hug_thumbs_up.jpg',
-      size: '663x432'
+      size: '640x960'
     },
     { 
       path: 'kneel.jpg',
-      size: '663x432'
+      size: '960x640'
     },
     { 
       path: 'outdoors.jpg',
-      size: '663x432'
+      size: '478x720'
     },
     { 
       path: 'she_said_yes.jpg',
-      size: '663x432'
+      size: '640x960'
     }]
 
   $.each(img_list, function(idx, figure) {
-  var path = figure.path
-  var size = figure.size
+  var path = figure.path;
+  var size = figure.size;
 
   var figure_html = 
+    // "<div class='my-gallery'>" +
     "<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" +
     "<a href=img/" + path +
     " itemprop='contentUrl' data-size=" + size +
     ">" +
     "<img src=img/" + path +
-    " class='img-thumbnail' itemprop='thumbnail' alt='Image description' />" +
+    " class='img-responsive img-thumbnail' itemprop='thumbnail' alt='Image description' />" +
     "</a>" +
     "<figcaption itemprop='caption description'></figcaption>" +
     "</figure>"
+    // + "</div>"
 
+    // if (idx > 3) {
+    //   $('.gallery-row-2').append(figure_html);
+    // } else {
+    //   $('.gallery-row-1').append(figure_html);  
+    // }
 
-    $('.test').append(figure_html);
+    $('.my-gallery').append(figure_html);  
   })
-
-
 
   // Execute photoswipe
   initPhotoSwipeFromDOM('.my-gallery');
 });
-
-
-
-
-
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 

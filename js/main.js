@@ -42,7 +42,7 @@ $( document ).ready(function() {
     " itemprop='contentUrl' data-size=" + size +
     ">" +
     "<img src=img/" + path +
-    " class='img-responsive img-thumbnail' itemprop='thumbnail' alt='Image description' />" +
+    " class='img-responsive img-thumbnail brick' itemprop='thumbnail' alt='Image description' />" +
     "</a>" +
     "<figcaption itemprop='caption description'></figcaption>" +
     "</figure>"
@@ -52,6 +52,25 @@ $( document ).ready(function() {
 
   // Execute photoswipe
   initPhotoSwipeFromDOM('.my-gallery');
+
+  var wall = new Freewall('.my-gallery');
+  // wall.fitWidth();
+
+  wall.reset({
+    selector: '.brick',
+    animate: true,
+    cellW: 150,
+    cellH: 'auto',
+    gutterY: 0,
+    gutterX: 0,
+      onResize: function() {
+      wall.fitWidth();
+    }
+  });
+  var images = wall.container.find('.brick');
+    images.find('img').load(function() {
+      wall.fitWidth();
+    });
 });
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {

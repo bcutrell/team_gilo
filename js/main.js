@@ -1,5 +1,56 @@
 $( document ).ready(function() {
-  // execute above function
+  var img_list =
+    [{ 
+      path: 'big_house.jpg',
+      size: '663x432'
+    },
+    { 
+      path: 'cake.jpg',
+      size: '539x960'
+    },
+    { 
+      path: 'gino_logo.jpg',
+      size: '663x432'
+    },
+    { 
+      path: 'hug_thumbs_up.jpg',
+      size: '663x432'
+    },
+    { 
+      path: 'kneel.jpg',
+      size: '663x432'
+    },
+    { 
+      path: 'outdoors.jpg',
+      size: '663x432'
+    },
+    { 
+      path: 'she_said_yes.jpg',
+      size: '663x432'
+    }]
+
+  $.each(img_list, function(idx, figure) {
+  var path = figure.path
+  var size = figure.size
+
+  var figure_html = 
+    "<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" +
+    "<a href=img/" + path +
+    " itemprop='contentUrl' data-size=" + size +
+    ">" +
+    "<img src=img/" + path +
+    " class='img-thumbnail' itemprop='thumbnail' alt='Image description' />" +
+    "</a>" +
+    "<figcaption itemprop='caption description'></figcaption>" +
+    "</figure>"
+
+
+    $('.test').append(figure_html);
+  })
+
+
+
+  // Execute photoswipe
   initPhotoSwipeFromDOM('.my-gallery');
 });
 

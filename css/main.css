@@ -4,8 +4,6 @@
    Author's custom styles
    ========================================================================== */
 
-
-
 *,
 *::before,
 *::after {
@@ -17,103 +15,31 @@
 html, body{
     height:100%;
     width: 100%;
+    font-family: 'Pacifico', cursive;
 }
 
 body {
   padding:50px;
   margin:0;
-  overflow:hidden;
-  background-color:#FAFAFA;
 }
 
-@-webkit-keyframes swinging{
-    0%{-webkit-transform: rotate(10deg);}
-    50%{-webkit-transform: rotate(-5deg)}
-    100%{-webkit-transform: rotate(10deg);}
-}
- 
-@keyframes swinging{
-    0%{transform: rotate(10deg);}
-    50%{transform: rotate(-5deg)}
-    100%{transform: rotate(10deg);}
-}
- 
-
-@-webkit-keyframes sleeping {
-    0%{ opacity:0;}
-    50%{ opacity:1;}
-    100%{ opacity:0;}
-}
- 
-@keyframes sleeping {
-    0%{ opacity:0;}
-    50%{ opacity:1;}
-    100%{ opacity:0;}
-}
- 
-#swinger {
-    -webkit-transform-origin: top center;
-    transform-origin: top center;
-    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
-    animation: swinging 3.5s ease-in-out forwards infinite;
+.my-gallery {
+  width: 100%;
+  margin: auto;
 }
 
-#zone {
-    opacity:0;
-    -webkit-animation: sleeping 3.5s ease-in-out forwards infinite;
-    animation: sleeping 3.5s ease-in-out forwards infinite;
+.my-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+
 }
 
-#ztwo {
-    opacity:0;
-    -webkit-animation: sleeping 3.5s ease-in-out forwards infinite;
-    animation: sleeping 3.5s ease-in-out forwards infinite;
-    animation-delay:0.4s;
-    -website-animation-delay:0.4s;
+.my-gallery figure {
+  margin: 0 5px 5px 0;
+  width: 300px;
 }
 
-#zthree {
-    opacity:0;
-    -webkit-animation: sleeping 3.5s ease-in-out forwards infinite;
-    animation: sleeping 3.5s ease-in-out forwards infinite;
-    animation-delay:0.7s;
-    -website-animation-delay:0.7s;
+.my-gallery figcaption {
+  display: none;
 }
-
-#zfour {
-    opacity:0;
-    -webkit-animation: sleeping 3.5s ease-in-out forwards infinite;
-    animation: sleeping 3.5s ease-in-out forwards infinite;
-    animation-delay:1s;
-    -website-animation-delay:1s;
-}
-
-#zfive {
-    opacity:0;
-    -webkit-animation: sleeping 3.5s ease-in-out forwards infinite;
-    animation: sleeping 3.5s ease-in-out forwards infinite;
-    animation-delay:1.3s;
-    -website-animation-delay:1.3s;
-}
-
-.container {
-  text-align:center;
-}
-
-svg {
-  max-width:1000px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-

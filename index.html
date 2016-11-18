@@ -12,8 +12,8 @@
 
         <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="css/vendor/clean-blog.css">
         <link rel="stylesheet" href="css/main.css">
 
                 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -54,12 +54,16 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">#TEAMGILO</a>
+                <!-- <a class="navbar-brand" href="index.html">#TEAMGILO</a> -->
             </div>
 
+            <!-- http://stackoverflow.com/questions/18756040/making-an-unordered-list-stretch-horizontally-so-as-to-always-fill-up-a-div -->
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav text-center">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">#TEAMGILO</a>
+                    </li>
                     <li>
                         <a href="index.html">Wedding Details</a>
                     </li>
@@ -89,10 +93,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <span class="subheading">SEPTEMBER 9, 2017</span>
+                        <div class="subheader-line">SEPTEMBER 9, 2017</div>
                         <h1>Lori & Gino</h1>
-
-                        <hr class="small"><span class="subheading">ARE GETTING MARRIED</span>
+                        <div class="subheader-line">Are Getting Married</div>
                     </div>
                 </div>
             </div>
@@ -102,7 +105,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="text-center">Box 1</h1>
+            <h1 class="text-center section-title nice-border">OUR STORY</h1>
+            <p>They met at the gym.</p>
           </div>
         </div>
       </div> <!-- /container -->

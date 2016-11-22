@@ -3,7 +3,7 @@
    ========================================================================== */
 
 @font-face {
-    font-family: 'YourFontName'; /*a name to be used later*/
+    font-family: 'cl'; /*a name to be used later*/
     src: url(../fonts/champagne_limousines/Champagne_Limousines.ttf); /*URL to font*/
 }
 
@@ -18,18 +18,17 @@
 html, body{
     height:100%;
     width: 100%;
-    font-family: 'YourFontName';
+    font-family: 'cl';
 }
 
-/*use specific class*/
-ul {
+ul.navbar-even {
   display:block;
   width:100%;
   margin:0;
   padding:0;
 }
 
-ul li {
+ul.navbar-even li {
   display:block;
   width:20%;
   margin:0;
@@ -38,9 +37,14 @@ ul li {
   float:left;
 }
 
+.clicked {
+  color: #BFA8B4 !important;
+  text-decoration: underline !important;
+}
+
 .image-bg-fluid-height {
     background: url(../img/kneel.jpg) no-repeat center center scroll;
-    padding: 300px 100px 150px 100px;
+    padding: 200px 100px 150px 100px;
     background-size: cover;
     opacity: 0.7;
 }
@@ -69,40 +73,12 @@ ul li {
   display: none;
 }
 
-
-.subheader-line {
-    overflow: hidden;
-    text-align: center;
-    font-size: 26px;
-}
-.subheader-line:before,
-.subheader-line:after {
-    background-color: white;
-    content: "";
-    display: inline-block;
-    height: 1px;
-    position: relative;
-    vertical-align: middle;
-    width: 50%;
-}
-.subheader-line:before {
-    right: 0.5em;
-    margin-left: -50%;
-}
-.subheader-line:after {
-    left: 0.5em;
-    margin-right: -50%;
-}
-
-.section-title {
+hr {
+  border:none;
   border-width: 0 0 13px 0;
+  height:7px;
+  width:100%;
+  border-style: dotted;
+  border-image: url("../img/dots.svg") 33% round;
 }
 
-.nice-border {
-  /* Safari & Chrome need border-style and border-color ¯\_(ツ)_/¯ */
-  border-style: dotted;
-  border-color: rgba(213, 126, 0, 1);
-  border-image-source: url('http://cl.ly/3c2J3c0l3r0P/dots.svg');
-  border-image-slice: 33% 33%;
-  border-image-repeat: round;
-}

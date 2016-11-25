@@ -7,6 +7,11 @@
     src: url(../fonts/champagne_limousines/Champagne_Limousines.ttf); /*URL to font*/
 }
 
+@font-face {
+    font-family: 'the_heart_of_everything'; /*a name to be used later*/
+    src: url(../fonts/the_heart_of_everything/The_Heart_of_Everything_Demo.ttf); /*URL to font*/
+}
+
 *,
 *::before,
 *::after {
@@ -73,12 +78,25 @@ ul.navbar-even li {
   display: none;
 }
 
-hr {
-  border:none;
-  border-width: 0 0 13px 0;
-  height:7px;
-  width:100%;
-  border-style: dotted;
-  border-image: url("../img/dots.svg") 33% round;
+h3 {
+  color: #0E4869;
+  font-family: 'the_heart_of_everything';
+  font-size: 40px;
 }
 
+.body-link {
+  color: #BFA8B4 !important;
+  text-decoration: underline !important;
+}
+
+.body-content {
+  font-family: 'Fanwood Text';
+}
+
+.body-text-small {
+
+}
+
+.body-text-medium {
+
+}

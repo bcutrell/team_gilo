@@ -1,25 +1,33 @@
-const ourStoryHtml = " \
-<div class='row'> \
-<div class='col-md-12'> \
-<p>They met at the gym.</p> \
-</div> \
-</div>"
-
-
 $( document ).ready(function() {
     loadScript("js/sam.js", cb);
 
     function cb() {
         sam()
     }
+    
     $("#navbarList li").click(function(evt) {
       var ele = evt.target;
       $(ele).addClass('clicked');
       $(this).siblings().children().removeClass('clicked')
 
-      $('#bodyContent').html(ourStoryHtml)
-
+      if (ele.id == "ourStory" ) {
+        $('#sectionHeader').html('OUR STORY');
+        $('#bodyContent').html(ourStoryHtml);
+      } else if (ele.id == "weddingDetails" ) {
+        $('#sectionHeader').html('WEDDING DETAILS');
+        $('#bodyContent').html(weddingDetailsHTML);
+      } else if (ele.id == "travel" ) {
+        $('#sectionHeader').html('TRAVEL');
+        $('#bodyContent').html(travelHTML);
+      } else if (ele.id == "bridalParty" ) {
+        $('#sectionHeader').html('BRIDAL PARTY');
+        $('#bodyContent').html('');
+      } else if (ele.id == "registry" ) {
+        $('#sectionHeader').html('REGISTRY');
+        $('#bodyContent').html('');
+      }
     })
+
 });
 
 function loadScript(url, callback)

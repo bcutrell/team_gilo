@@ -1,6 +1,7 @@
 // http://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587
 // http://vnjs.net/www/project/freewall/
 
+$( document ).ready(function() {
 var img_list =
     [{ 
       path: 'hug_thumbs_up.jpg',
@@ -73,6 +74,9 @@ images.find('img').load(function() {
 });
 
 });
+
+
+
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
@@ -275,3 +279,6 @@ var hashData = photoswipeParseHash();
 if(hashData.pid && hashData.gid) {
     openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
 }
+};
+
+

@@ -22,7 +22,18 @@ he asked if she would have him for the rest of her life. She thought about it, b
 the ups, and the downs, they were together. \
 They met at the gym, but they became inseparable everywhere else. </p> \
 </div> \
-</div>"
+</div> \
+<div class='row'> \
+<div class='col-md-2'> \
+<img src='img/fancy_line_left.png' style='width: 100%;'> \
+</div> \
+<div class='col-md-8'> \
+<p class='text-center'>We invite you to share in share in the celebration of their love on September 9, 2016!</p> \
+</div> \
+<div class='col-md-2'> \
+<img src='img/fancy_line_right.png' style='width: 100%;'> \
+</div> \
+"
 
 const weddingDetailsHTML = " \
 <div class='row'> \
@@ -60,5 +71,27 @@ Cancellations are accepted with no fee, until 48 hours prior to arrival date. </
 <p>For availability, call 207-386-1310 or go to their website </p> \
 <p>Transportation to the wedding will be provided from the hotel. More details to follow</p> \
 </div> \
+</div> \
+"
+
+const bridalPartyHTML = " \
+<div class='row'> \
+<div class='col-md-6 text-center'> \
+<h3>bridesmaids</h3> \
+</div> \
+<div class='col-md-6 text-center'> \
+<h3>groomsmen</h3> \
+</div> \
+</div> \
+"
+
+const registryHTML = " \
+<div class='text-center'>Selct the logos below to view each registry</div> \
+<div class='row'> \
+<div class='col-md-6 text-center'> \
+<img src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg' style='width: 100%; height: 300px;'> \
+</div> \
+<div class='col-md-6 text-center'> \
+<img src='https://upload.wikimedia.org/wikipedia/commons/6/62/Amazon.com-Logo.svg' style='width: 100%; height:300px;'> \
 </div> \
 "

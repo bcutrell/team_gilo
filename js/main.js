@@ -1,9 +1,7 @@
 $( document ).ready(function() {
-    loadScript("js/sam.js", cb);
-
-    function cb() {
-        sam()
-    }
+    // Set initial content
+    $('#sectionHeader').html('OUR STORY');
+    $('#bodyContent').html(ourStoryHtml);
     
     $("#navbarList li").click(function(evt) {
       var ele = evt.target;
@@ -21,28 +19,11 @@ $( document ).ready(function() {
         $('#bodyContent').html(travelHTML);
       } else if (ele.id == "bridalParty" ) {
         $('#sectionHeader').html('BRIDAL PARTY');
-        $('#bodyContent').html('');
+        $('#bodyContent').html(bridalPartyHTML);
       } else if (ele.id == "registry" ) {
         $('#sectionHeader').html('REGISTRY');
-        $('#bodyContent').html('');
+        $('#bodyContent').html(registryHTML );
       }
     })
 
 });
-
-function loadScript(url, callback)
-{
-    // Adding the script tag to the head as suggested before
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = url;
-
-    // Then bind the event to the callback function.
-    // There are several events for cross browser compatibility.
-    script.onreadystatechange = callback;
-    script.onload = callback;
-
-    // Fire the loading
-    head.appendChild(script);
-}

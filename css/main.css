@@ -100,3 +100,11 @@ h3 {
 .body-text-medium {
 
 }
+
+.dotted-line {
+  margin-top: 15px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}

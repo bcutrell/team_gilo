@@ -44,7 +44,7 @@ var figure_html =
 " itemprop='contentUrl' data-size=" + size +
 ">" +
 "<img src=img/" + path +
-" class='img-responsive img-thumbnail' style='height:200px; width: 200px' itemprop='thumbnail' alt='Image description' />" +
+" class='img-responsive' style='height:200px; width: 200px' itemprop='thumbnail' alt='Image description' />" +
 "</a>" +
 "<figcaption itemprop='caption description'></figcaption>" +
 "</figure>"

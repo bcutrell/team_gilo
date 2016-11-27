@@ -52,19 +52,19 @@ Menu <i class="fa fa-bars"></i>
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 <ul id="navbarList" class="nav navbar-nav navbar-even">
 <li>
-<a href="#">#TEAMGILO</a>
+<a id="ourStory" href="#">#TEAMGILO</a>
 </li>
 <li>
-<a href="#">WEDDING DETAILS</a>
+<a id="weddingDetails" href="#">WEDDING DETAILS</a>
 </li>
 <li>
-<a href="#">TRAVEL</a>
+<a id="travel" href="#">TRAVEL</a>
 </li>
 <li>
-<a href="#">BRIDAL PARTY</a>
+<a id="bridalParty" href="#">BRIDAL PARTY</a>
 </li>
 <li>
-<a href="#">REGISTRY</a>
+<a id="registry" href="#">REGISTRY</a>
 </li>
 </ul>
 </div>
@@ -79,31 +79,90 @@ Menu <i class="fa fa-bars"></i>
 </header>
 
 <div class="container">
+  
   <div class="row">
-    <div class="col-md-5"><hr></div>
+    <div class="col-md-5"><img src="img/dotted_line.png" style="width: 100%"></div>
     <div class="col-md-2">
-      <h2 class="text-center">OUR STORY</h2>
+      <h2 id="sectionHeader" class="text-center">OUR STORY</h2>
     </div>
-    <div class="col-md-5"><hr></div>
+    <div class="col-md-5"><img src="img/dotted_line.png" style="width: 100%"></div>
   </div>
 
-  <div id="bodyContent"></div>
+  <div id="bodyContent" class='body-content'></div>
+
+  <div class="row">
+    <div class="col-md-5"><img src="img/dotted_line.png" style="width: 100%"></div>
+    <div class="col-md-2">
+      <h2 class="text-center">PHOTOS</h2>
+    </div>
+    <div class="col-md-5"><img src="img/dotted_line.png" style="width: 100%"></div>
+  </div>
+  <!-- Start gallery -->
+  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+  </div>
 
 </div> <!-- /container -->
 
 <div id="footer" class="container">
   <div class="row">
     <div class="col-md-12 text-center">
-      <p>We invite you to share in share in the celebration of their love on September 9, 2016!</p>
+      
     </div>
   </div>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+    It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+    <div class="pswp__item"></div>
+    <div class="pswp__item"></div>
+    <div class="pswp__item"></div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+    <!--  Controls are self-explanatory. Order can be changed. -->
+    <div class="pswp__counter"></div>
+    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+    <button class="pswp__button pswp__button--share" title="Share"></button>
+    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+    <!-- element will get class pswp__preloader--active when preloader is running -->
+    <div class="pswp__preloader">
+    <div class="pswp__preloader__icn">
+    <div class="pswp__preloader__cut">
+    <div class="pswp__preloader__donut"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+    <div class="pswp__share-tooltip"></div> 
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+    <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+
+</div>
 </div> <!-- /container -->
 
-
-
-
-
 <script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/photoswiper.js"></script>
+<script src="js/sections.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -1,6 +1,7 @@
 // http://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587
 // http://vnjs.net/www/project/freewall/
 
+$( document ).ready(function() {
 var img_list =
     [{ 
       path: 'hug_thumbs_up.jpg',
@@ -31,9 +32,11 @@ var img_list =
       size: '663x432'
     }]
 
+
+// height and width properties determine image size
 $.each(img_list, function(idx, figure) {
-var path = figure.path;
-var size = figure.size;
+    var path = figure.path;
+    var size = figure.size;
 
 var figure_html = 
 "<figure class='brick' itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" +
@@ -41,12 +44,13 @@ var figure_html =
 " itemprop='contentUrl' data-size=" + size +
 ">" +
 "<img src=img/" + path +
-" class='img-responsive img-thumbnail' itemprop='thumbnail' alt='Image description' />" +
+" class='img-responsive' style='height:200px; width: 200px' itemprop='thumbnail' alt='Image description' />" +
 "</a>" +
 "<figcaption itemprop='caption description'></figcaption>" +
 "</figure>"
 
 $('.my-gallery').append(figure_html);  
+
 })
 
 // Execute photoswipe
@@ -58,8 +62,8 @@ wall.fitWidth();
 wall.reset({
 selector: '.brick',
 animate: true,
-cellW: 150,
-cellH: 'auto',
+cellW: 200,
+cellH: 200,
 gutterY: 0,
 gutterX: 0,
 onResize: function() {
@@ -73,6 +77,9 @@ images.find('img').load(function() {
 });
 
 });
+
+
+
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
@@ -275,3 +282,6 @@ var hashData = photoswipeParseHash();
 if(hashData.pid && hashData.gid) {
     openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
 }
+};
+
+

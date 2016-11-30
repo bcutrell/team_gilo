@@ -26,6 +26,8 @@ html, body{
     font-family: 'cl';
 }
 
+// .container { width: auto; }
+
 ul.navbar-even {
   display:block;
   width:100%;

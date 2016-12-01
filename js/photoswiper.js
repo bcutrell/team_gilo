@@ -44,7 +44,7 @@ var figure_html =
 " itemprop='contentUrl' data-size=" + size +
 ">" +
 "<img src=img/" + path +
-" class='img-responsive' style='height:200px; width: 200px' itemprop='thumbnail' alt='Image description' />" +
+" class='img-responsive' itemprop='thumbnail' alt='Image description' />" +
 "</a>" +
 "<figcaption itemprop='caption description'></figcaption>" +
 "</figure>"
@@ -63,7 +63,7 @@ wall.reset({
 selector: '.brick',
 animate: true,
 cellW: 200,
-cellH: 200,
+cellH: 'auto',
 gutterY: 0,
 gutterX: 0,
 onResize: function() {

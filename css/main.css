@@ -26,6 +26,8 @@ html, body{
     font-family: 'cl';
 }
 
+// .container { width: auto; }
+
 ul.navbar-even {
   display:block;
   width:100%;
@@ -99,4 +101,12 @@ h3 {
 
 .body-text-medium {
 
+}
+
+.dotted-line {
+  margin-top: 15px;
+}
+
+.nowrap {
+  white-space: nowrap;
 }

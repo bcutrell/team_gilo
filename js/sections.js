@@ -24,14 +24,14 @@ They met at the gym, but they became inseparable everywhere else. </p> \
 </div> \
 </div> \
 <div class='row'> \
-<div class='col-md-2'> \
-<img src='img/fancy_line_left.png' style='width: 100%;'> \
+<div class='col-md-2 text-center fancy-line'> \
+<img src='img/fancy_line_left.png'> \
 </div> \
 <div class='col-md-8'> \
 <p class='text-center'>We invite you to share in share in the celebration of their love on September 9, 2016!</p> \
 </div> \
-<div class='col-md-2'> \
-<img src='img/fancy_line_right.png' style='width: 100%;'> \
+<div class='col-md-2 text-center fancy-line'> \
+<img src='img/fancy_line_right.png'> \
 </div> \
 "
 
@@ -39,15 +39,16 @@ const weddingDetailsHTML = " \
 <div class='row'> \
 <div class='col-md-6 text-center'> \
 <h3>When</h3> \
-Saturday, September 9, 2017 <br> \
-3:30 p.m. <br> \
-Dinner, drinks & dancing to follow \
+<p>Saturday, September 9, 2017</p> \
+<p>3:30 p.m.</p> \
+<p>Dinner, drinks & dancing to follow</p> \
 </div> \
 <div class='col-md-6 text-center'> \
 <h3>Where</h3> \
-The 1774 Inn (LINK) <br> \
-44 Parker Head Rd Phippsburg, ME <br> \
-IMAGE \
+<p><a href='http://www.1774inn.com/'>The 1774 Inn (LINK)</a></p> \
+<p>44 Parker Head Rd</p> \
+<p>Phippsburg, ME</p> \
+<img src='img/1774inn_picture.png' style='width: 50%;'> \
 </div> \
 </div> \
 "
@@ -57,8 +58,9 @@ const travelHTML = " \
 <div class='col-md-6 text-center'> \
 <h3>Travel</h3> \
 For our guests traveling from afar,  fly into the <br> \
-<div class='body-link'>Portland International Airport (PWM)</div> or <br> \
-<div class='body-link'>Boston Logan International Airport (BOS)</div> \
+<p><a class='body-link'>Portland International Airport (PWM)</a> or</p> \
+<p><a class='body-link'>Boston Logan International Airport (BOS)</a></p> \
+<img src='img/mainemap.png' style='width: 30%;'> \
 </div> \
 <div class='col-md-6 text-center'> \
 <h3>accomodations</h3> \
@@ -78,9 +80,11 @@ const bridalPartyHTML = " \
 <div class='row'> \
 <div class='col-md-6 text-center'> \
 <h3>bridesmaids</h3> \
+<img src='img/cake.jpg' class='img-circle bridal-img'> \
 </div> \
 <div class='col-md-6 text-center'> \
 <h3>groomsmen</h3> \
+<img src='img/cake.jpg' class='img-circle bridal-img'> \
 </div> \
 </div> \
 "

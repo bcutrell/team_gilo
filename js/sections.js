@@ -38,17 +38,21 @@ They met at the gym, but they became inseparable everywhere else. </p> \
 const weddingDetailsHTML = " \
 <div class='row'> \
 <div class='col-md-6 text-center'> \
-<h3>When</h3> \
+<h3>when</h3> \
 <p>Saturday, September 9, 2017</p> \
 <p>3:30 p.m.</p> \
 <p>Dinner, drinks & dancing to follow</p> \
 </div> \
 <div class='col-md-6 text-center'> \
-<h3>Where</h3> \
-<p><a href='http://www.1774inn.com/'>The 1774 Inn (LINK)</a></p> \
-<p>44 Parker Head Rd</p> \
-<p>Phippsburg, ME</p> \
+<h3>where</h3> \
+<p> \
+<address> \
+<a class='body-link' href='http://www.1774inn.com/'>The 1774 Inn</a><br> \
+44 Parker Head Rd<br> \
+Phippsburg, ME<br> \
+</address> \
 <img src='img/1774inn_picture.png' style='width: 50%;'> \
+</p> \
 </div> \
 </div> \
 "
@@ -56,7 +60,7 @@ const weddingDetailsHTML = " \
 const travelHTML = " \
 <div class='row'> \
 <div class='col-md-6 text-center'> \
-<h3>Travel</h3> \
+<h3>travel</h3> \
 For our guests traveling from afar,  fly into the <br> \
 <p><a class='body-link'>Portland International Airport (PWM)</a> or</p> \
 <p><a class='body-link'>Boston Logan International Airport (BOS)</a></p> \

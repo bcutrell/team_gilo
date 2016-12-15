@@ -135,10 +135,11 @@ h3 {
 
 .fancy-line img {
     width: 100%;
-  }
+}
 
-@media (max-width: 900px) {
+@media (max-width: 990px) {
   .fancy-line img {
     width: 50%;
   }
 }
+

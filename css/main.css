@@ -26,7 +26,9 @@ html, body{
     font-family: 'cl';
 }
 
-// .container { width: auto; }
+/*http://stackoverflow.com/questions/15884102/bootstrap-how-do-i-change-the-width-of-the-container*/
+
+.container { width: auto; }
 
 ul.navbar-even {
   display:block;
@@ -44,6 +46,13 @@ ul.navbar-even li {
   float:left;
 }
 
+@media (max-width: 768px) {
+  ul.navbar-even li {
+  width: 100%;
+  float: none;
+  }
+}
+
 .clicked {
   color: #BFA8B4 !important;
   text-decoration: underline !important;
@@ -51,10 +60,17 @@ ul.navbar-even li {
 
 .image-bg-fluid-height {
     background: url(../img/kneel.jpg) no-repeat center center scroll;
+    opacity: 0.7;
+    // background: url(../img/backgroundimage.png) no-repeat center center scroll;
     padding: 200px 100px 150px 100px;
     background-size: cover;
-    opacity: 0.7;
 }
+/*
+black overlay
+.image-bg-fluid-height:after {
+  background: rgba(0,0,0,0.6);
+}*/
+
 .img-center {
     margin: 0 auto;
 }
@@ -110,3 +126,20 @@ h3 {
 .nowrap {
   white-space: nowrap;
 }
+
+
+.bridal-img {
+  height: 200px;
+  width: 200px;
+}
+
+.fancy-line img {
+    width: 100%;
+}
+
+@media (max-width: 990px) {
+  .fancy-line img {
+    width: 50%;
+  }
+}
+

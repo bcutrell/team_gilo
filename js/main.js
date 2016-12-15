@@ -12,7 +12,7 @@ $( document ).ready(function() {
         $('#sectionHeader').html('OUR STORY');
         $('#bodyContent').html(ourStoryHtml);
       } else if (ele.id == "weddingDetails" ) {
-        $('#sectionHeader').html('WEDDING DETAILS');
+        $('#sectionHeader').html('DETAILS');
         $('#bodyContent').html(weddingDetailsHTML);
       } else if (ele.id == "travel" ) {
         $('#sectionHeader').html('TRAVEL');

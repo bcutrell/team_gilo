@@ -4,6 +4,8 @@ $( document ).ready(function() {
     $('#bodyContent').html(ourStoryHtml);
     
     $("#navbarList li").click(function(evt) {
+      event.preventDefault();
+
       var ele = evt.target;
       $(ele).addClass('clicked');
       $(this).siblings().children().removeClass('clicked')
@@ -24,6 +26,11 @@ $( document ).ready(function() {
         $('#sectionHeader').html('REGISTRY');
         $('#bodyContent').html(registryHTML );
       }
-    })
 
+      // scroll to div
+      $('html, body').animate({
+        scrollTop: $('#sectionHeader').offset().top
+      }, 1000);
+    })
 });
+

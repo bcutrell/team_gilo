@@ -24,13 +24,13 @@ They met at the gym, but they became inseparable everywhere else. </p> \
 </div> \
 </div> \
 <div class='row'> \
-<div class='col-md-2 text-center fancy-line'> \
+<div class='col-sm-2 text-center fancy-line'> \
 <img src='img/fancy_line_left.png'> \
 </div> \
-<div class='col-md-8'> \
+<div class='col-sm-8'> \
 <p class='text-center'>We invite you to share in share in the celebration of their love on September 9, 2016!</p> \
 </div> \
-<div class='col-md-2 text-center fancy-line'> \
+<div class='col-sm-2 text-center fancy-line'> \
 <img src='img/fancy_line_right.png'> \
 </div> \
 "

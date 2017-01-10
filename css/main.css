@@ -26,6 +26,10 @@ html, body{
     font-family: 'cl';
 }
 
+p {
+  margin: 20px 0;
+}
+
 /*http://stackoverflow.com/questions/15884102/bootstrap-how-do-i-change-the-width-of-the-container*/
 
 .container { width: auto; }
@@ -63,28 +67,15 @@ ul.navbar-even li {
 }
 
 .image-bg-fluid-height {
-    background:  rgba(74, 74, 74, .5) url(../img/kneel.jpg) no-repeat center center scroll;
-    // background: url(../img/backgroundimage.png) no-repeat center center scroll;
+    background:  
+      linear-gradient(
+        rgba(74, 74, 74, .5),
+        rgba(74, 74, 74, .5)
+      ),
+    url(../img/kneel.jpg) no-repeat center center scroll;
     padding: 200px 100px 150px 100px;
     background-size: cover;
 }
-
-.test {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-display: block;
-background: rgba(74, 74, 74, .5);
-}
-
-
-/*
-black overlay
-.image-bg-fluid-height:after {
-  background: rgba(0,0,0,0.6);
-}*/
 
 .img-center {
     margin: 0 auto;

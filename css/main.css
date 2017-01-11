@@ -30,9 +30,14 @@ p {
   margin: 20px 0;
 }
 
-/*http://stackoverflow.com/questions/15884102/bootstrap-how-do-i-change-the-width-of-the-container*/
 
-.container { width: auto; }
+/* http://stackoverflow.com/questions/15884102/bootstrap-how-do-i-change-the-width-of-the-container */
+/* https://codyhouse.co/gem/back-to-top/ 
+ * https://cdnjs.com/libraries/semantic-ui
+ * */
+
+
+// .container { width: auto; }
 
 ul.navbar-even {
   display:block;
@@ -66,19 +71,28 @@ ul.navbar-even li {
   text-decoration: underline !important;
 }
 
+
+/* http://jsfiddle.net/gilbitron/Lt2wH/ */
 .image-bg-fluid-height {
-    background:  
-      linear-gradient(
-        rgba(74, 74, 74, .5),
-        rgba(74, 74, 74, .5)
-      ),
-    url(../img/kneel.jpg) no-repeat center center scroll;
-    padding: 200px 100px 150px 100px;
-    background-size: cover;
+  background: 
+    linear-gradient(
+      rgba(74, 74, 74, .4),
+      rgba(74, 74, 74, .4)
+    ),
+  url(../img/teamgilo.jpg) no-repeat center center fixed;
+  padding: 200px 100px 150px 100px;
+
+  /* parallax 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  */
+  background-size: cover;
 }
 
 .img-center {
     margin: 0 auto;
+    width: 50%
 }
 
 .my-gallery {

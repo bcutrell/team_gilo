@@ -1,3 +1,9 @@
+/*http://stackoverflow.com/questions/27887808/css-vh-and-vw-why-does-my-div-overlap-with-the-div-above-it*/
+/*div { 
+  overflow: hidden;
+  clear:both; 
+}*/
+
 body {
   font-family: "Century Gothic", 'Lato', sans-serif;
   margin: 0;  
@@ -35,10 +41,11 @@ a {
 }*/
 
 .et-hero-tabs,
-.et-slide {
+.et-slide
+ {
   display: -webkit-box;
   display: -ms-flexbox;
-  /*display: flex; OVERFLOW ISSUE?*/
+  display: flex; /*OVERFLOW ISSUE?*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -49,7 +56,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+/*  height: 100vh;*/
   position: relative;
 }
 
@@ -123,7 +130,7 @@ a {
 }
 
 
-.full-side-img {
+/*.full-side-img {
   height:100vh;
 }
 
@@ -131,4 +138,4 @@ a {
   .full-side-img {
     height: 50vh;
   }
-}
+}*/

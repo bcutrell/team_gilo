@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <!-- Hero -->
-  <section class="et-hero-tabs">
+  <!-- Hero -->
+  <section class="et-hero-tabs ui container fluid">
   <div class="hero-img">
     <div class="main-hero-text">
-      <img class="main-hero-text" src="img/main_hero_text.png" alt="">
+      <img class="ui large image centered" src="img/gettingmarried.png" alt="">
     </div>
   </div>
     <div class="et-hero-tabs-container">
@@ -31,8 +31,10 @@
   
   <!-- TODOS -->
   <!-- May need to remove top padding -->
-  <main class="et-main">
-    <section class="et-slide" id="tab-es6">
+  <!-- test inline block -->
+  <!-- need stackable grid -->
+  <main class="et-main"> <!-- #wrapper ??? -->
+    <section class="et-slide" id="tab-es6"> <!-- style="display:inline-block;" -->
       <div class="ui container">
         <img class="ui medium left floated image" src="img/story_1.jpg">
         <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
@@ -40,18 +42,20 @@
         <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
          <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
       </div>
-      <h1 class="center aligned">Photos</h1>
+      <div class="center aligned ui container">
+      <h2>Photos</h2>
       <div class="ui medium images relaxed">
         <img src="img/1100.jpg">
         <img src="img/1135.jpg">
         <img src="img/1172.jpg">
       </div>
+      </div>
     </section>
 
     <section class="et-slide" id="tab-flexbox">
-      <div class="ui grid">
-        <div class="eight wide column">
-        <img class="ui fluid left floated image" src="img/our_day.jpg">
+      <div class="ui grid stackable">
+        <div class="eight wide column full-side-img">
+          <img class="ui left floated image full-side-img" src="img/our_day.jpg">
         </div>
         <div class="eight wide column center aligned">
           <h2>CEREMONY & RECEPTION</h2>

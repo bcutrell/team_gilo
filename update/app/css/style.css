@@ -1,5 +1,12 @@
 body {
   font-family: "Century Gothic", 'Lato', sans-serif;
+  margin: 0;  
+}
+
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
 }
 
 a {
@@ -15,29 +22,23 @@ a {
     ),
   url(../img/teamgilo.jpg) no-repeat center center fixed;
   /* padding: 300px 100px 150px 100px; */
-  padding-top: 40vh; 
+  padding-top: 25vh; 
   width: 100%;
   height: 100%;
-
-  /* parallax 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  */
   background-size: cover;
 }
 
 /* http://semantic-ui.com/elements/image.html */
-.main-hero-text {
+/*.main-hero-text {
   display: block;
   margin: 0 auto;
-}
+}*/
 
 .et-hero-tabs,
 .et-slide {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  /*display: flex; OVERFLOW ISSUE?*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -50,8 +51,8 @@ a {
           align-items: center;
   height: 100vh;
   position: relative;
-  background: #eee;
 }
+
 .et-hero-tabs h1,
 .et-slide h1 {
   font-size: 3rem;
@@ -77,8 +78,8 @@ a {
   bottom: 0;
   width: 100%;
   height: 70px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);*/
+  background: #F4F4F4;
   z-index: 10;
 }
 .et-hero-tabs-container--top {
@@ -119,4 +120,15 @@ a {
   background: #66B1F1;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
+}
+
+
+.full-side-img {
+  height:100vh;
+}
+
+@media (max-width: 600px) {
+  .full-side-img {
+    height: 50vh;
+  }
 }

@@ -27,6 +27,7 @@ a {
   background-size: cover;
 }
 
+/* http://semantic-ui.com/elements/image.html */
 .main-hero-text {
   display: block;
   margin: 0 auto;

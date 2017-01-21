@@ -138,14 +138,14 @@ a {
 }
 
 .car-image {
-  height: 250px;
+  height: 200px;
   width: auto;
   margin: 0 auto;
 }
 
-.girls-car {
-  width: 80%;
-  margin: 0 auto;
+.party-content {
+  line-height: 2rem;
+  text-align: left;
 }
 
 /*UTILITY*/
@@ -189,12 +189,22 @@ a {
   margin-top: 50px !important; 
 }
 
+.mtl {
+  margin-top: 100px !important; 
+}
+
 .mbm {
  margin-bottom: 50px !important;  
 }
 
 /*MEDIA QUERIES*/
+@media (max-width: 767px) {
+  .prev { left: 5px; }
+  .next { right: 5px; }
+}
+
 @media (max-width: 992px) {
+
   .et-hero-tabs,
   .et-slide {
     height: auto;

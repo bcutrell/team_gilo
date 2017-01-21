@@ -33,6 +33,16 @@ a {
   background-size: cover;
 }
 
+.parallax {
+
+   background-image: url(../img/travel.jpg);
+      /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* http://semantic-ui.com/elements/image.html */
 /*.main-hero-text {
   display: block;
@@ -195,4 +205,9 @@ a {
 
 .prm {
   padding-right: 3.5rem !important;  
+}
+
+
+.rsvp-btn {
+  cursor: all-scroll;
 }

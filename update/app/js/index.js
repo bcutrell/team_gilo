@@ -142,3 +142,6 @@ function girlContentMap(idx) {
 
 
 
+$('.rsvp-btn').click(function() {
+	$('.ui.modal').modal('show');
+})

@@ -197,6 +197,10 @@ a {
  margin-bottom: 50px !important;  
 }
 
+.mbl {
+  margin-bottom: 100px !important;
+}
+
 /*MEDIA QUERIES*/
 @media (max-width: 767px) {
   .prev { left: 5px; }

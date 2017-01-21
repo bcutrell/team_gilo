@@ -77,7 +77,6 @@ new StickyNavigation();
 
 $(document).ready(function() {
 
-
 var girls = [
 'bhuta',
 'pinone',

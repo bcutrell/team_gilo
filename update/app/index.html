@@ -2,8 +2,8 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Sticky Slider Navigation (Responsive)</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <title>GiLo</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/vendor/semantic.min.css">
   <link rel="stylesheet" href="css/vendor/slick.css">
@@ -11,11 +11,14 @@
 </head>
 
 <body>
-<div class="overlay fixed rsvp-btn" style="position: fixed; top: 100px; right: 20px; z-index: 999;">
-  <img class="ui tiny image centered" src="img/rsvp.png" alt="">
-</div>
+
+  <!-- RSVP Button -->
+  <div class="overlay fixed rsvp-btn" style="position: fixed; top: 100px; right: 20px; z-index: 999;">
+    <img class="ui tiny image centered" src="img/rsvp.png" alt="">
+  </div>
+
+
   <!-- Hero -->
-  <!-- https://www.quora.com/When-using-CSS-how-can-I-prevent-my-DIVs-from-overlapping-when-I-shrink-my-browser -->
   <section class="et-hero-tabs">
   <div class="hero-img">
     <div class="main-hero-text">
@@ -23,25 +26,23 @@
     </div>
   </div>
     <div class="et-hero-tabs-container">
-      <a class="et-hero-tab" href="#tab-es6">Our Story</a>
-      <a class="et-hero-tab" href="#tab-flexbox">Our Day</a>
-      <a class="et-hero-tab" href="#tab-react">Travel</a>
-      <a class="et-hero-tab" href="#tab-angular">Wedding Party</a>
-      <a class="et-hero-tab" href="#tab-other">Registry</a>
+      <a class="et-hero-tab text-center med-text" href="#tab-es6">Our Story</a>
+      <a class="et-hero-tab text-center med-text" href="#tab-flexbox">Our Day</a>
+      <a class="et-hero-tab text-center med-text" href="#tab-react">Travel</a>
+      <a class="et-hero-tab text-center med-text" href="#tab-angular">Wedding Party</a>
+      <a class="et-hero-tab text-center med-text" href="#tab-other">Registry</a>
       <span class="et-hero-tab-slider"></span>
     </div>
   </section>
 
   <!-- Main -->
-  
   <!-- TODOS -->
   <!-- May need to remove top padding -->
   <!-- test inline block -->
   <!-- need stackable grid -->
-  
-  <main class="et-main"> <!-- #wrapper ??? -->
+  <main class="et-main">
     <section class="et-slide" id="tab-es6">
-      <div class="ui container">
+      <div class="ui container med-text mtm">
         <img class="ui medium left floated image" src="img/story_1.jpg">
         <p>They met at the gym.</p>
         <p>He was only able to see her for an hour a week. Every Tuesday at 5 PM, he would smile knowing that she would be there. He was nervous and fumbled his words around her, but eventually he caught her attention even if she only knew him as 'the cute funny coach.' </p>
@@ -58,18 +59,21 @@
           They met at the gym, but they became inseparable everywhere else. </p>         
       </div>
 
-      <div class="ui container center aligned">
+      <!-- <img src="img/photo_1.jpg">
+        <img src="img/photo_2.jpg"> -->
+        <!-- <img src="img/photo_7.jpg">
+        <img src="img/photo_8.jpg"> -->
+
+      <div class="mtm ui container center aligned">
       <h2>Photos</h2>
       <div class="ui four column small images relaxed">
-        <!-- <img src="img/photo_1.jpg">
-        <img src="img/photo_2.jpg"> -->
+        
         <img src="img/photo_3.jpg">
         <img src="img/photo_4.jpg">
         <img src="img/photo_5.jpg">
         <img src="img/photo_6.jpg">
         </div>
-        <!-- <img src="img/photo_7.jpg">
-        <img src="img/photo_8.jpg"> -->
+        
         <div class="ui four column small images relaxed">
         <img src="img/photo_9.jpg">
         <img src="img/photo_10.jpg">
@@ -101,7 +105,7 @@
     <section class="et-slide" id="tab-react">
       <div class="parallax full-top" ></div>
       <!-- <img class="parallax ui image full-top" src="img/travel.jpg"> -->
-      <div class="ui container" style="height: 50vh">
+      <div class="ui container vh50"> 
         <div class="ui divided stackable two column very relaxed grid mts">
           <div class="column center aligned">
           <h2>ACCOMODATIONS</h2>
@@ -134,8 +138,8 @@
 <!-- todo change padding of slider not entire column -->
     <section class="et-slide" id="tab-angular">
 <div class="ui container">
-<div class="ui relaxed center aligned grid">
-  <div class='eight wide column plm prm'>
+<div class="ui relaxed center aligned stackable grid">
+  <div class='eight wide column'> <!-- plm prm -->
   <div class="ui large header">Bridesmaids</div>
   <div id="girlsList" class="ui horizontal bulleted list">
   <div class="item"><a>Sarah Buhta</a></div>
@@ -148,18 +152,18 @@
   </div>
   <div class="girls"><!-- images added via JS --></div>
   <div class="girl-content">
-
   </div>
   </div>
 
-<div class='eight wide column plm prm'>
+<div class='eight wide column'> <!-- plm prm -->
 <div class="ui large header center aligned">Groomsmen</div>
 <div class="dudes">
 <div>
-<img class="ui  image" src="https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg" /> 
+<img class="ui medium image" src="https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg" /> 
 </div>
-<div><img class="ui image" src="https://static.pexels.com/photos/4164/landscape-mountains-nature-mountain.jpeg"/></div>
-<div><img class="ui image" src="https://static.pexels.com/photos/139573/pexels-photo-139573.jpeg"/></div>
+<div><img class="ui medium image" src="https://static.pexels.com/photos/4164/landscape-mountains-nature-mountain.jpeg"/></div>
+<div><img class="ui medium image" src="https://static.pexels.com/photos/139573/pexels-photo-139573.jpeg"/></div>
+</div>
 </div>
 </div>
 </div>

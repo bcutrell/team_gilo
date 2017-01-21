@@ -1,24 +1,11 @@
-/*http://stackoverflow.com/questions/27887808/css-vh-and-vw-why-does-my-div-overlap-with-the-div-above-it*/
-/*div { 
-  overflow: hidden;
-  clear:both; 
-}*/
-
 body {
-  font-family: "Century Gothic", 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   margin: 0;  
-}
-
-#wrapper {
-    margin-left:auto;
-    margin-right:auto;
-    width:960px;
 }
 
 a {
   text-decoration: none;
 }
-
 
 .hero-img {
   background: 
@@ -34,20 +21,13 @@ a {
 }
 
 .parallax {
-
    background-image: url(../img/travel.jpg);
-      /* Create the parallax scrolling effect */
+  /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/* http://semantic-ui.com/elements/image.html */
-/*.main-hero-text {
-  display: block;
-  margin: 0 auto;
-}*/
 
 .et-hero-tabs,
 .et-slide
@@ -81,7 +61,6 @@ a {
   letter-spacing: 0.3rem;
   opacity: 0.6;
 }
-
 .et-hero-tabs-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,8 +101,8 @@ a {
   transition: all 0.5s ease;
 }
 .et-hero-tab:hover {
-  color: white;
-  background: rgba(102, 177, 241, 0.8);
+  color: #000080; /*white;*/
+  /*background: rgba(102, 177, 241, 0.8);*/
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -133,7 +112,7 @@ a {
   bottom: 0;
   width: 0;
   height: 6px;
-  background: #66B1F1;
+  background: #000080;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
 }
@@ -143,6 +122,88 @@ a {
   width:100%;
 }
 
+.full-top {
+  height: 50vh;
+  width:100%;
+}
+
+.prev,
+.next
+{
+     font-size: 2em !important;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+.prev { left: -35px; }
+.next { right: -35px; }
+
+.slick-slide.c {
+    display: inline-block;
+    vertical-align: middle;
+    float:none;
+}
+
+.rsvp-btn {
+  cursor: all-scroll;
+}
+
+/*UTILITY*/
+.big-text {
+  font-size: 24px;
+}
+
+.med-text {
+  font-size: 20px;
+}
+
+.small-text {
+  font-size: 18pt;
+}
+
+.link-text {
+  color: #C497AE;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.semi-strong {
+  font-weight: 600; 
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+
+.mts {
+  margin-top: 10px !important;
+}
+
+.mtm {
+  margin-top: 50px !important; 
+}
+
+.vh50 {
+  height: 50vh;
+}
+
+/*MEDIA QUERIES*/
 @media (max-width: 992px) {
   .et-hero-tabs,
   .et-slide {
@@ -155,59 +216,12 @@ a {
   .full-side {
     height: 50vh;
   }
-}
 
-.full-top {
-  height: 50vh;
-  width:100%;
-}
+  .vh50 {
+    height: auto;
+  }
 
-.mts {
-  margin-top: 10px !important;
-}
-
-.prev,
-.next
-{
-     font-size: 2em !important;
-    line-height: 0;
-
-    position: absolute;
-    top: 50%;
-
-    display: block;
-
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-
-    cursor: pointer;
-
-
-} 
-
-.prev { left: -35px; }
-.next { right: -35px; }
-
-.slick-slide.c {
-    display: inline-block;
-    vertical-align: middle;
-    float:none;
-}
-
-.plm {
-    padding-left: 3.5rem !important;
-    
-}
-
-.prm {
-  padding-right: 3.5rem !important;  
-}
-
-
-.rsvp-btn {
-  cursor: all-scroll;
+  p {
+    clear: both;
+  }
 }

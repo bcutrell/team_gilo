@@ -89,7 +89,7 @@ var girls = [
 
 $.each(girls, function(idx, girl) {
 	var girl_url = 'img/' + girl + '.jpg';
-	var div_img = "<div class='c'><img class='ui image' src=" + girl_url + " ></div>";
+	var div_img = "<div class='c'><img class='car-image' src=" + girl_url + " ></div>";
 	$('.girls').append(div_img);
 })
 

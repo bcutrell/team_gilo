@@ -152,3 +152,47 @@ a {
   width:100%;
 }
 
+.mts {
+  margin-top: 10px !important;
+}
+
+.prev,
+.next
+{
+     font-size: 2em !important;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+
+} 
+
+.prev { left: -35px; }
+.next { right: -35px; }
+
+.slick-slide.c {
+    display: inline-block;
+    vertical-align: middle;
+    float:none;
+}
+
+.plm {
+    padding-left: 3.5rem !important;
+    
+}
+
+.prm {
+  padding-right: 3.5rem !important;  
+}

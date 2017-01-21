@@ -6,10 +6,16 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/vendor/semantic.min.css">
+  <link rel="stylesheet" href="css/vendor/slick.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+<div class="overlay fixed" style="position: fixed; top: 10px; right: 10px; z-index: 10;">
+<div class="ui labeled icon vertical menu">
+<a class="item"><i class="twitter icon"></i> Tweet</a>
+</div>
+</div>
   <!-- Hero -->
   <!-- https://www.quora.com/When-using-CSS-how-can-I-prevent-my-DIVs-from-overlapping-when-I-shrink-my-browser -->
   <section class="et-hero-tabs">
@@ -95,9 +101,9 @@
     </section>
 
     <section class="et-slide" id="tab-react">
-      <img class="ui image full-top" src="img/travel.jpg">
-      <div class="ui container" style="height: 50vh;">
-        <div class="ui divided two column very relaxed grid">
+      <img class="ui image full-top" src="img/travel.jpg"> <!-- full-top -->
+      <div class="ui container" style="height: 50vh">
+        <div class="ui divided stackable two column very relaxed grid mts">
           <div class="column center aligned">
           <h2>ACCOMODATIONS</h2>
           <p>A special group rate is available at the</p>
@@ -120,27 +126,58 @@
             <p>or</p>
             <p>Boston Logan International Airport (BOS)</p>
             <button class="ui button">View Directions</button>
-            <img class="ui centered small image" src='img/mainemap.png'>
+            <img class="ui centered tiny image" src='img/mainemap.png'>
           </div>
         </div>
       </div>
     </section>
 
-
-
-
+<!-- todo change padding of slider not entire column -->
     <section class="et-slide" id="tab-angular">
-      <h1>Angular</h1>
-      <h3>something about angular</h3>
+<div class="ui container">
+<div class="ui relaxed center aligned grid">
+  <div class='eight wide column plm prm'>
+  <div class="ui large header">Bridesmaids</div>
+  <div id="girlsList" class="ui horizontal bulleted list">
+  <div class="item"><a>Sarah Buhta</a></div>
+  <div class="item"><a>Elizabeth Pinone</a></div>
+  <div class="item"><a>Chrissy Rossi</a></div>
+  <div class="item"><a>Cordelia Nagle</a></div>
+  <div class="item"><a>Mary Carpenter</a></div>
+  <div class="item"><a>Sarah James</a></div>
+  <div class="item"><a>Dafne Escalante</a></div>
+  </div>
+  <div class="girls"><!-- images added via JS --></div>
+  <div class="girl-content">
+
+  </div>
+  </div>
+
+<div class='eight wide column plm prm'>
+<div class="ui large header center aligned">Groomsmen</div>
+<div class="dudes">
+<div>
+<img class="ui  image" src="https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg" /> 
+</div>
+<div><img class="ui image" src="https://static.pexels.com/photos/4164/landscape-mountains-nature-mountain.jpeg"/></div>
+<div><img class="ui image" src="https://static.pexels.com/photos/139573/pexels-photo-139573.jpeg"/></div>
+</div>
+</div>
+</div>
     </section>
+
+
     <section class="et-slide" id="tab-other">
       <h1>Other</h1>
       <h3>something about other</h3>
     </section>
+
+
   </main>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   <script src="js/vendor/semantic.min.js"></script>
+  <script src="js/vendor/slick.min.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>

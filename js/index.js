@@ -1,3 +1,4 @@
+// https://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587
 // TODO
 // O so much refactoring, I blame the trillium growler
 // fix naming conventions

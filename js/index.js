@@ -1,75 +1,41 @@
 // https://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587
 // TODO
-// O so much refactoring, I blame the trillium growler
-// fix naming conventions
-// goal -> get this to < 30 lines
+// sync naming
 
 $(document).ready(function() {
+  setupRsvpBtn()
 
-var girls = [
-'bhuta',
-'pinone',
-'rossi',
-'nagle',
-'mary_carpenter',
-'james',
-'escalante'
-];
+  addWeddingPartyPictures(dudes, '.dudes')
+  addWeddingPartyPictures(ladies, '.girls')
 
-$.each(girls, function(idx, girl) {
-	var girl_url = 'img/' + girl + '.jpg';
-	var div_img = "<div class='c'><img class='car-image' src=" + girl_url + " ></div>";
-	$('.girls').append(div_img);
+  startSlick('.dudes, .girls')
+
+  setCurrentSlide(boyContent, '.dudes', '.girl-content');
+  setCurrentSlide(girlContent, '.girls', '.boy-content');
+
+  changeContentOnSlideChange()
+
+
+  setupGalleryLinks('#girlsList', '.girls')
+  setupGalleryLinks('#boysList', '.dudes')
 })
 
-var boys = [
+const ladies = [
+  'bhuta',
+  'pinone',
+  'rossi',
+  'nagle',
+  'mary_carpenter',
+  'james',
+  'escalante'
+];
+
+const dudes = [
 	'cakounes',
 	'barkley',
 	'sheehy',
 	'miles_carpenter'
-]
-
-$.each(boys, function(idx, boy) {
-	var boy_url = 'img/' + boy + '.jpg';
-	var div_img = "<div class='c'><img class='car-image' src=" + boy_url + " ></div>";
-	$('.dudes').append(div_img);
-})
-
-$('.dudes, .girls').slick({
-'prevArrow':"<i class='prev angle left icon'></i>",
-'nextArrow':"<i class='next angle right icon'></i>"
-}
-);
-
-var currentSlide = $('.girls').slick('slickCurrentSlide');
-var content = girlContentMap(currentSlide);
-$('.girl-content').html(content);
-
-var currentSlide = $('.dudes').slick('slickCurrentSlide');
-var content = boyContentMap(currentSlide);
-$('.boy-content').html(content);
-
-$('.dudes, .girls').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	if ($(event.target).hasClass('dudes')) {
-		var content = boyContentMap(nextSlide);
-	  $('.boy-content').html(content);
-	} else {
-	  var content = girlContentMap(nextSlide);
-	  $('.girl-content').html(content);
-	}
-});
-
-$('#girlsList').click(function(event) {
-	var idx = $(event.target).parent().index()
-	$('.girls').slick('slickGoTo', idx);
-})
-
-$('#boysList').click(function(event) {
-	var idx = $(event.target).parent().index()
-	$('.dudes').slick('slickGoTo', idx);
-})
-
-})
+];
 
 const girlContent = [
 "<strong>Matron of Honor</strong> I have looked up to my sister my entire life: from stealing and sometimes ruining, her clothes, losing her favorite softball glove to now having her as my role model and best friend. We both love any outdoor activity, especially in Maine, entertaining, and most importantly spending time with our family. ",
@@ -81,10 +47,6 @@ const girlContent = [
 "<strong>Bridesmaid</strong> The little sister I have always wanted! We share the same passion for traveling and she helps me find the best deals shopping. Dafne is so thoughtful in everything she does and I am so lucky to be gaining her as a little sister. Gino, Dafne and I have the best time just hanging out even if we are doing absolutely nothing :) "
 ]
 
-function girlContentMap(idx) {
-	return girlContent[idx]
-}
-
 const boyContent = [
 "<strong>Best Man</strong> Tom and Gino met in college where through the fraternity, swim team, and living together they became great friends. Tom has always looked up to Gino and how cool he is. One day hopes to live up to his expectations.",
 "<strong>Groomsmen</strong> Adam and Gino have shared almost everything. They were in the fraternity together. They swam together. They lived together in and out of college. Through thick and thin, Adam has always been a true friend to Gino.",
@@ -92,10 +54,56 @@ const boyContent = [
 "<strong>Groomsmen</strong> The brother in law to be could not have been filled by a better man. With having a great sense of humor, laidback demeanor, and just the right amount of competitive spirit Gino has found Miles to be a wonderful, caring brother to Lori."
 ]
 
-function boyContentMap(idx) {
-	return boyContent[idx]
+
+function addWeddingPartyPictures(people, galleryElement) {
+  $.each(people, function(idx, person) {
+    var img_url = 'img/' + person + '.jpg';
+    var div_img = "<div class='c'><img class='car-image' src=" + img_url + " ></div>";
+    $(galleryElement).append(div_img);
+  })
 }
 
-$('.rsvp-btn').click(function() {
-	$('.ui.modal').modal('show');
-})
+function startSlick(element) {
+  $(element).slick({
+    'prevArrow':"<i class='prev angle left icon'></i>",
+    'nextArrow':"<i class='next angle right icon'></i>"
+    }
+  );
+}
+
+function setCurrentSlide(contentMap, slickEle, contentEle) {
+  var currentSlide = $(slickEle).slick('slickCurrentSlide');
+  var content = contentMap[currentSlide];
+  $(contentEle).html(content);
+}
+
+function setupGalleryLinks(listEle, galleryEle) {
+  $(listEle).click(function(event) {
+    var idx = $(event.target).parent().index();
+    $(galleryEle).slick('slickGoTo', idx);
+  })
+}
+
+function changeContentOnSlideChange() {
+  $('.dudes, .girls').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    if ($(event.target).hasClass('dudes')) {
+      var content = boyContent[nextSlide];
+      $('.boy-content').html(content);
+    } else {
+      var content = girlContent[nextSlide];
+      $('.girl-content').html(content);
+    }
+  });
+}
+
+function setupRsvpBtn() {
+  $('.rsvp-btn').click(function() {
+    $('.ui.modal').modal('show');
+  })
+}
+
+function setupPhotoswipeGallery(element) {
+
+}
+
+

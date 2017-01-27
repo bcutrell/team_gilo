@@ -105,6 +105,19 @@ function setupRsvpBtn() {
 
 // https://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587
 // http://photoswipe.com/documentation/responsive-images.html
+// Semantic-UI image sizes
+// Mini 35px
+// Tiny 80px
+// Small  150px
+// Medium 300px
+// Large  450px
+// Big  600px
+// Huge 800px
+// Massive  960px
+//
+// http://resizeimage.net/
+// http://makethumbnails.com/#options
+
 function setupPhotoswipeGallery(element) {
   $(element).each( function() {
     var $pic     = $(this),

@@ -105,6 +105,7 @@ function setupRsvpBtn() {
 
 // https://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587
 // http://photoswipe.com/documentation/responsive-images.html
+// http://webresizer.com/resizer/
 // Semantic-UI image sizes
 // Mini 35px
 // Tiny 80px
@@ -148,14 +149,14 @@ $pic.on('click', 'a', function(event) {
       event.preventDefault();
           var $index = $(this).index();
           var options = {
-                        index: $index,
+                        index: $index
                         //bgOpacity: 0.7,
                         //showHideOpacity: true
       }
                    
 // Initialize PhotoSwipe
 var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-lightBox.init();
+  lightBox.init();
 });
 });
 

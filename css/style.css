@@ -214,6 +214,9 @@ a {
 @media (max-width: 767px) {
   .prev { left: 5px; }
   .next { right: 5px; }
+  .inn-img { margin-bottom: 20px }
+
+  #storySection img { width: 200px; height: auto; }
 }
 
 @media (max-width: 992px) {

@@ -1,10 +1,12 @@
 // TODO
 // sync naming
+// Other images
 
 $(document).ready(function() {
   setupRsvpBtn()
 
   setupPhotoswipeGallery('#photoGallery');
+  setupPhotoswipeGallery('#storySection');
 
   addWeddingPartyPictures(dudes, '.dudes')
   addWeddingPartyPictures(ladies, '.girls')
@@ -22,9 +24,6 @@ $(document).ready(function() {
 
   setupPhotoswipeGallery('#boysList', boyContent);
   setupPhotoswipeGallery('#girlsList', girlContent);
-  // $(".dudes img")[0].naturalWidth
-  //<a href=" + img_url + " data-index='1' data-size='100x100'>
-  // $.each($('.girls img'), function(x, img) { console.log(img.naturalWidth); console.log(img.naturalHeight); console.log(img) })
 })
 
 

@@ -147,6 +147,11 @@ a {
   margin: 0 auto;
 }
 
+#photoGallery img {
+  width: 140px;
+  height: 120px;
+}
+
 .party-content {
   line-height: 2rem;
   text-align: left;
@@ -217,6 +222,10 @@ a {
   .inn-img { margin-bottom: 20px }
 
   #storySection img { width: 200px; height: auto; }
+
+  .hero-img { height: 500px; }
+
+  .et-hero-tab { font-size: 18px; }
 }
 
 @media (max-width: 992px) {
@@ -224,9 +233,6 @@ a {
   .et-hero-tabs,
   .et-slide {
     height: auto;
-  }
-  .hero-img {
-    height: 100vh;
   }
 
   .full-side {

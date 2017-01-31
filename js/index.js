@@ -1,150 +1,49 @@
-class StickyNavigation {
-	
-	constructor() {
-		this.currentId = null;
-		this.currentTab = null;
-		this.tabContainerHeight = 70;
-		let self = this;
-		$('.et-hero-tab').click(function() { 
-			self.onTabClick(event, $(this)); 
-		});
-		$(window).scroll(() => { this.onScroll(); });
-		$(window).resize(() => { this.onResize(); });
-	}
-	
-	onTabClick(event, element) {
-		event.preventDefault();
-		let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
-		$('html, body').animate({ scrollTop: scrollTop }, 600);
-	}
-	
-	onScroll() {
-		this.checkTabContainerPosition();
-    this.findCurrentTabSelector();
-	}
-	
-	onResize() {
-		if(this.currentId) {
-			this.setSliderCss();
-		}
-	}
-	
-	checkTabContainerPosition() {
-		let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
-		if($(window).scrollTop() > offset) {
-			$('.et-hero-tabs-container').addClass('et-hero-tabs-container--top');
-		} 
-		else {
-			$('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top');
-		}
-	}
-	
-	findCurrentTabSelector(element) {
-		let newCurrentId;
-		let newCurrentTab;
-		let self = this;
-		$('.et-hero-tab').each(function() {
-			let id = $(this).attr('href');
-			let offsetTop = $(id).offset().top - self.tabContainerHeight;
-			let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
-			if($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
-				newCurrentId = id;
-				newCurrentTab = $(this);
-			}
-		});
-		if(this.currentId != newCurrentId || this.currentId === null) {
-			this.currentId = newCurrentId;
-			this.currentTab = newCurrentTab;
-			this.setSliderCss();
-		}
-	}
-	
-	setSliderCss() {
-		let width = 0;
-		let left = 0;
-		if(this.currentTab) {
-			width = this.currentTab.css('width');
-			left = this.currentTab.offset().left;
-		}
-		$('.et-hero-tab-slider').css('width', width);
-		$('.et-hero-tab-slider').css('left', left);
-	}
-	
-}
-
-new StickyNavigation();
-
 // TODO
-// O so much refactoring, I blame the trillium growler
-// fix naming conventions
-// goal -> get this to < 30 lines
+// sync naming
+// Other images
 
 $(document).ready(function() {
+  setupRsvpBtn()
 
-var girls = [
-'bhuta',
-'pinone',
-'rossi',
-'nagle',
-'mary_carpenter',
-'james',
-'escalante'
-];
+  setupPhotoswipeGallery('#photoGallery');
+  setupPhotoswipeGallery('#storySection');
 
-$.each(girls, function(idx, girl) {
-	var girl_url = 'img/' + girl + '.jpg';
-	var div_img = "<div class='c'><img class='car-image' src=" + girl_url + " ></div>";
-	$('.girls').append(div_img);
+  addWeddingPartyPictures(dudes, '.dudes')
+  addWeddingPartyPictures(ladies, '.girls')
+
+  startSlick('.dudes, .girls')
+
+  setCurrentSlide(boyContent, '.dudes', '.boy-content');
+  setCurrentSlide(girlContent, '.girls', '.girl-content');
+
+  changeContentOnSlideChange()
+
+  setupGalleryLinks('#girlsList', '.girls')
+  setupGalleryLinks('#boysList', '.dudes')
+
+
+  setupPhotoswipeGallery('#boysList', boyContent);
+  setupPhotoswipeGallery('#girlsList', girlContent);
 })
 
-var boys = [
+
+
+const ladies = [
+  'bhuta',
+  'pinone',
+  'rossi',
+  'nagle',
+  'mary_carpenter',
+  'james',
+  'escalante'
+];
+
+const dudes = [
 	'cakounes',
 	'barkley',
 	'sheehy',
 	'miles_carpenter'
-]
-
-$.each(boys, function(idx, boy) {
-	var boy_url = 'img/' + boy + '.jpg';
-	var div_img = "<div class='c'><img class='car-image' src=" + boy_url + " ></div>";
-	$('.dudes').append(div_img);
-})
-
-$('.dudes, .girls').slick({
-'prevArrow':"<i class='prev angle left icon'></i>",
-'nextArrow':"<i class='next angle right icon'></i>"
-}
-);
-
-var currentSlide = $('.girls').slick('slickCurrentSlide');
-var content = girlContentMap(currentSlide);
-$('.girl-content').html(content);
-
-var currentSlide = $('.dudes').slick('slickCurrentSlide');
-var content = boyContentMap(currentSlide);
-$('.boy-content').html(content);
-
-$('.dudes, .girls').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	if ($(event.target).hasClass('dudes')) {
-		var content = boyContentMap(nextSlide);
-	  $('.boy-content').html(content);
-	} else {
-	  var content = girlContentMap(nextSlide);
-	  $('.girl-content').html(content);
-	}
-});
-
-$('#girlsList').click(function(event) {
-	var idx = $(event.target).parent().index()
-	$('.girls').slick('slickGoTo', idx);
-})
-
-$('#boysList').click(function(event) {
-	var idx = $(event.target).parent().index()
-	$('.dudes').slick('slickGoTo', idx);
-})
-
-})
+];
 
 const girlContent = [
 "<strong>Matron of Honor</strong> I have looked up to my sister my entire life: from stealing and sometimes ruining, her clothes, losing her favorite softball glove to now having her as my role model and best friend. We both love any outdoor activity, especially in Maine, entertaining, and most importantly spending time with our family. ",
@@ -156,10 +55,6 @@ const girlContent = [
 "<strong>Bridesmaid</strong> The little sister I have always wanted! We share the same passion for traveling and she helps me find the best deals shopping. Dafne is so thoughtful in everything she does and I am so lucky to be gaining her as a little sister. Gino, Dafne and I have the best time just hanging out even if we are doing absolutely nothing :) "
 ]
 
-function girlContentMap(idx) {
-	return girlContent[idx]
-}
-
 const boyContent = [
 "<strong>Best Man</strong> Tom and Gino met in college where through the fraternity, swim team, and living together they became great friends. Tom has always looked up to Gino and how cool he is. One day hopes to live up to his expectations.",
 "<strong>Groomsmen</strong> Adam and Gino have shared almost everything. They were in the fraternity together. They swam together. They lived together in and out of college. Through thick and thin, Adam has always been a true friend to Gino.",
@@ -167,10 +62,128 @@ const boyContent = [
 "<strong>Groomsmen</strong> The brother in law to be could not have been filled by a better man. With having a great sense of humor, laidback demeanor, and just the right amount of competitive spirit Gino has found Miles to be a wonderful, caring brother to Lori."
 ]
 
-function boyContentMap(idx) {
-	return boyContent[idx]
+
+function addWeddingPartyPictures(people, galleryElement) {
+  $.each(people, function(idx, person) {
+    var img_url = 'img/' + person + '.jpg';
+    var div_img = "<div class='c'><img class='car-image' src=" + img_url + " ></div>";
+    $(galleryElement).append(div_img);
+  })
 }
 
-$('.rsvp-btn').click(function() {
-	$('.ui.modal').modal('show');
-})
+function startSlick(element) {
+  $(element).slick({
+    'prevArrow':"<i class='prev angle left icon'></i>",
+    'nextArrow':"<i class='next angle right icon'></i>"
+    }
+  );
+}
+
+function setCurrentSlide(contentMap, slickEle, contentEle) {
+  var currentSlide = $(slickEle).slick('slickCurrentSlide');
+  var content = contentMap[currentSlide];
+  $(contentEle).html(content);
+
+  $($('#girlsList .item a')[currentSlide]).addClass('link-text');
+  $($('#boysList .item a')[currentSlide]).addClass('link-text');
+}
+
+function setupGalleryLinks(listEle, galleryEle) {
+  $(listEle).click(function(event) {
+    var idx = $(event.target).parent().index();
+    $(galleryEle).slick('slickGoTo', idx);
+  })
+}
+
+function changeContentOnSlideChange() {
+  $('.dudes, .girls').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    if ($(event.target).hasClass('dudes')) {
+      var content = boyContent[nextSlide];
+      $('.boy-content').html(content);
+
+      $('#boysList .item a').removeClass('link-text');
+      $($('#boysList .item a')[nextSlide]).addClass('link-text');
+
+    } else {
+      var content = girlContent[nextSlide];
+      $('.girl-content').html(content);
+
+
+      $('#girlsList .item a').removeClass('link-text');
+      $($('#girlsList .item a')[nextSlide]).addClass('link-text');
+    }
+  });
+}
+
+function setupRsvpBtn() {
+  $('.rsvp-btn').click(function() {
+    $('.ui.modal').modal('show');
+  })
+}
+
+// https://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587
+// http://photoswipe.com/documentation/responsive-images.html
+// http://webresizer.com/resizer/
+// Semantic-UI image sizes
+// Mini 35px
+// Tiny 80px
+// Small  150px
+// Medium 300px
+// Large  450px
+// Big  600px
+// Huge 800px
+// Massive  960px
+//
+// http://resizeimage.net/
+// http://makethumbnails.com/#options
+
+function setupPhotoswipeGallery(element, content) {
+  $content = (typeof content !== 'undefined') ?  content : false;
+
+  $(element).each( function() {
+    var $pic     = $(this),
+      getItems = function() {
+        var items = [];
+        $pic.find('a').each(function() {
+        var $href   = $(this).attr('href'),
+        $size   = $(this).data('size').split('x'),
+        $width  = $size[0],
+        $height = $size[1];
+
+        var item = {
+        src : $href,
+        w   : $width,
+        h   : $height
+        }
+
+        console.log($content);
+        if ($content) {
+          item.title = $content[$(this).data('index')];
+        }
+
+        items.push(item);
+    });
+    return items;
+    }
+
+var items = getItems();
+console.log(items);
+var $pswp = $('.pswp')[0];
+$pic.on('click', 'a', function(event) {
+      event.preventDefault();
+          var $index = $(this).data('index') || $(this).index();
+          var options = {
+                        index: $index
+                        //bgOpacity: 0.7,
+                        //showHideOpacity: true
+      }
+                   
+// Initialize PhotoSwipe
+var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+  lightBox.init();
+});
+});
+
+}
+
+

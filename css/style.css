@@ -49,7 +49,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  /*height: 100vh;*/
 }
 
 .et-hero-tabs-container {
@@ -137,10 +136,20 @@ a {
   cursor: pointer;
 }
 
+.rsvp-btn img {
+  width: 120px;
+  height: auto;
+}
+
 .car-image {
   height: 200px;
   width: auto;
   margin: 0 auto;
+}
+
+#photoGallery img {
+  width: 140px;
+  height: 120px;
 }
 
 .party-content {
@@ -163,6 +172,11 @@ a {
 
 .link-text {
   color: #C497AE;
+}
+
+.link-text:hover {
+  color: #C497AE;
+  cursor: pointer;
 }
 
 .link-text:hover {
@@ -205,6 +219,13 @@ a {
 @media (max-width: 767px) {
   .prev { left: 5px; }
   .next { right: 5px; }
+  .inn-img { margin-bottom: 20px }
+
+  #storySection img { width: 200px; height: auto; }
+
+  .hero-img { height: 500px; }
+
+  .et-hero-tab { font-size: 18px; }
 }
 
 @media (max-width: 992px) {
@@ -212,9 +233,6 @@ a {
   .et-hero-tabs,
   .et-slide {
     height: auto;
-  }
-  .hero-img {
-    height: 100vh;
   }
 
   .full-side {
@@ -225,7 +243,8 @@ a {
     height: auto;
   }
 
-  p {
-    clear: both;
-  }
+  /*p {
+TODO    clear: both; rezing with images...?
+  }*/
 }
+

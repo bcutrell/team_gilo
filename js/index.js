@@ -40,7 +40,7 @@ const ladies = [
 
 const dudes = [
 	'cakounes',
-	'barkley',
+	'barkley_img',
 	'sheehy',
 	'miles_carpenter'
 ];

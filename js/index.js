@@ -11,15 +11,23 @@ $(document).ready(function() {
 
   startSlick('.dudes, .girls')
 
-  setCurrentSlide(boyContent, '.dudes', '.girl-content');
-  setCurrentSlide(girlContent, '.girls', '.boy-content');
+  setCurrentSlide(boyContent, '.dudes', '.boy-content');
+  setCurrentSlide(girlContent, '.girls', '.girl-content');
 
   changeContentOnSlideChange()
 
-
   setupGalleryLinks('#girlsList', '.girls')
   setupGalleryLinks('#boysList', '.dudes')
+
+
+  setupPhotoswipeGallery('#boysList', boyContent);
+  setupPhotoswipeGallery('#girlsList', girlContent);
+  // $(".dudes img")[0].naturalWidth
+  //<a href=" + img_url + " data-index='1' data-size='100x100'>
+  // $.each($('.girls img'), function(x, img) { console.log(img.naturalWidth); console.log(img.naturalHeight); console.log(img) })
 })
+
+
 
 const ladies = [
   'bhuta',
@@ -76,6 +84,9 @@ function setCurrentSlide(contentMap, slickEle, contentEle) {
   var currentSlide = $(slickEle).slick('slickCurrentSlide');
   var content = contentMap[currentSlide];
   $(contentEle).html(content);
+
+  $($('#girlsList .item a')[currentSlide]).addClass('link-text');
+  $($('#boysList .item a')[currentSlide]).addClass('link-text');
 }
 
 function setupGalleryLinks(listEle, galleryEle) {
@@ -90,9 +101,17 @@ function changeContentOnSlideChange() {
     if ($(event.target).hasClass('dudes')) {
       var content = boyContent[nextSlide];
       $('.boy-content').html(content);
+
+      $('#boysList .item a').removeClass('link-text');
+      $($('#boysList .item a')[nextSlide]).addClass('link-text');
+
     } else {
       var content = girlContent[nextSlide];
       $('.girl-content').html(content);
+
+
+      $('#girlsList .item a').removeClass('link-text');
+      $($('#girlsList .item a')[nextSlide]).addClass('link-text');
     }
   });
 }
@@ -119,7 +138,9 @@ function setupRsvpBtn() {
 // http://resizeimage.net/
 // http://makethumbnails.com/#options
 
-function setupPhotoswipeGallery(element) {
+function setupPhotoswipeGallery(element, content) {
+  $content = (typeof content !== 'undefined') ?  content : false;
+
   $(element).each( function() {
     var $pic     = $(this),
       getItems = function() {
@@ -133,8 +154,12 @@ function setupPhotoswipeGallery(element) {
         var item = {
         src : $href,
         w   : $width,
-        h   : $height,
-        title: 'Image Caption'
+        h   : $height
+        }
+
+        console.log($content);
+        if ($content) {
+          item.title = $content[$(this).data('index')];
         }
 
         items.push(item);
@@ -147,7 +172,7 @@ console.log(items);
 var $pswp = $('.pswp')[0];
 $pic.on('click', 'a', function(event) {
       event.preventDefault();
-          var $index = $(this).index();
+          var $index = $(this).data('index') || $(this).index();
           var options = {
                         index: $index
                         //bgOpacity: 0.7,

@@ -49,7 +49,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  /*height: 100vh;*/
 }
 
 .et-hero-tabs-container {
@@ -137,6 +136,11 @@ a {
   cursor: pointer;
 }
 
+.rsvp-btn img {
+  width: 120px;
+  height: auto;
+}
+
 .car-image {
   height: 200px;
   width: auto;
@@ -163,6 +167,11 @@ a {
 
 .link-text {
   color: #C497AE;
+}
+
+.link-text:hover {
+  color: #C497AE;
+  cursor: pointer;
 }
 
 .link-text:hover {
@@ -225,7 +234,8 @@ a {
     height: auto;
   }
 
-  p {
-    clear: both;
-  }
+  /*p {
+TODO    clear: both; rezing with images...?
+  }*/
 }
+

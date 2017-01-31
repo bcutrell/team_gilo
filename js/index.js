@@ -156,7 +156,6 @@ function setupPhotoswipeGallery(element, content) {
         h   : $height
         }
 
-        console.log($content);
         if ($content) {
           item.title = $content[$(this).data('index')];
         }
@@ -167,7 +166,6 @@ function setupPhotoswipeGallery(element, content) {
     }
 
 var items = getItems();
-console.log(items);
 var $pswp = $('.pswp')[0];
 $pic.on('click', 'a', function(event) {
       event.preventDefault();

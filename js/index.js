@@ -3,8 +3,6 @@
 // Other images
 
 $(document).ready(function() {
-  setupRsvpBtn()
-
   setupPhotoswipeGallery('#photoGallery');
   setupPhotoswipeGallery('#storySection');
 
@@ -113,12 +111,6 @@ function changeContentOnSlideChange() {
       $($('#girlsList .item a')[nextSlide]).addClass('link-text');
     }
   });
-}
-
-function setupRsvpBtn() {
-  $('.rsvp-btn').click(function() {
-    $('.ui.modal').modal('show');
-  })
 }
 
 // https://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587

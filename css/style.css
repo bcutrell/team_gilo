@@ -134,10 +134,14 @@ a {
 
 .rsvp-btn {
   cursor: pointer;
+  position: fixed; 
+  top: 100px; 
+  right: 30px; 
+  z-index: 999;
 }
 
 .rsvp-btn img {
-  width: 120px;
+  width: 175px;
   height: auto;
 }
 
@@ -226,6 +230,11 @@ a {
   .hero-img { height: 500px; }
 
   .et-hero-tab { font-size: 18px; }
+
+  .rsvp-btn img {
+    width: 125px;
+    height: auto;
+  }
 }
 
 @media (max-width: 992px) {

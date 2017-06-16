@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/vendor/semantic.min.css">
   <link rel="stylesheet" href="css/vendor/slick.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/timeline.css">
 
 
   <!-- Core CSS file -->
@@ -25,7 +26,7 @@
   <!-- RSVP Button hidden for now -->
   <a target="_blank" href="http://teamgilo.rsvpify.com">
     <div class="overlay fixed rsvp-btn">
-      <img class="ui image centered" src="img/rsvp.png" alt="">
+      <img class="ui image centered" src="img/rsvp_btn.png" alt="">
     </div>
   </a>
 
@@ -153,7 +154,87 @@
           <img class="ui centered medium image inn-img" src='img/1774inn.png'>
         </div>
       </div>
+
+      <div style="width: 100%; background-color: #f8f8f8;">
+<section class="cd-horizontal-timeline">
+<div class="timeline">
+<div class="events-wrapper">
+<div class="events">
+<ol>
+
+<li><a href="#0" data-date="01/01/2014" class="selected"><img class="ui centered event-nail image mts" src='img/event_glass.png'></a></li>
+<li><a href="#0" data-date="01/03/2014">28 Feb</a></li>
+<li><a href="#0" data-date="01/05/2014">20 Mar</a></li>
+<li><a href="#0" data-date="01/07/2014">20 May</a></li>
+<li><a href="#0" data-date="01/09/2014">09 Jul</a></li>
+<li><a href="#0" data-date="01/11/2014">30 Aug</a></li>
+<li><a href="#0" data-date="01/12/2014">15 Sep</a></li>
+
+<!-- 
+01/01/2014
+01/03/2014
+01/05/2014
+01/07/2014
+01/09/2014
+01/11/2014
+01/12/2014 
+-->
+
+</ol>
+
+<span class="filling-line" aria-hidden="true"></span>
+</div> <!-- .events -->
+</div> <!-- .events-wrapper -->
+
+<ul class="cd-timeline-navigation">
+<li><a href="#0" class="prev inactive">Prev</a></li>
+<li><a href="#0" class="next">Next</a></li>
+</ul> <!-- .cd-timeline-navigation -->
+</div> <!-- .timeline -->
+
+<div class="events-content">
+<ol>
+<li class="selected" data-date="01/01/2014">
+<h4>Welcome Party</h4>
+<em>Friday, 8:00 PM</em>
+<em>Hello</em>
+</li>
+
+<li data-date="01/03/2014">
+
+</li>
+
+<li data-date="01/05/2014">
+
+</li>
+
+<li data-date="01/07/2014">
+
+</li>
+
+<li data-date="01/09/2014">
+
+</li>
+
+<li data-date="01/11/2014">
+
+</li>
+
+<li data-date="01/12/2014">
+
+</li>
+
+</ol>
+</div> <!-- .events-content -->
+</section>
+</div>
+    
+
+
     </section>
+
+
+
 
     <section class="et-slide" id="tab-react">
       <div class="parallax" ></div>
@@ -247,34 +328,6 @@
     </section>
   </main>
 
-
-
-<!-- RSVP MODAL -->
-<div class="ui modal">
-  <i class="close icon"></i>
-  <div class="header">
-    RSVP
-  </div>
-
-  <div class="image content">
-    <div class="ui medium image">
-      <img src="img/rsvp.png">
-    </div>
-    <div class="description">
-
-      <h2 class="med-text mts"><i class="warning sign icon"></i>Coming soon...</h2>
-    </div>
-  </div>
-  <div class="actions">
-
-    <div class="ui positive right labeled icon button">
-      See you soon!
-      <i class="checkmark icon"></i>
-    </div>
-  </div>
-</div>
-
-
 <!-- PHOTOSWIPE ELEMENTS -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 <div class="pswp__bg"></div>
@@ -324,5 +377,6 @@
 
   <script src="js/nav.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/timeline.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
   var timelines = $('.cd-horizontal-timeline'),
-    eventsMinDistance = 60;
+    eventsMinDistance = 110;
 
   (timelines.length > 0) && initTimeline(timelines);
 
@@ -130,7 +130,8 @@ jQuery(document).ready(function($){
   function setDatePosition(timelineComponents, min) {
     for (i = 0; i < timelineComponents['timelineDates'].length; i++) { 
         var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
-          distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;
+          distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 1;
+          console.log(distanceNorm*min);
         timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm*min+'px');
     }
   }

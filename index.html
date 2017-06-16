@@ -5,9 +5,11 @@
   <title>GiLo</title>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/vendor/semantic.min.css">
   <link rel="stylesheet" href="css/vendor/slick.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/timeline.css">
 
 
   <!-- Core CSS file -->
@@ -25,7 +27,7 @@
   <!-- RSVP Button hidden for now -->
   <a target="_blank" href="http://teamgilo.rsvpify.com">
     <div class="overlay fixed rsvp-btn">
-      <img class="ui image centered" src="img/rsvp.png" alt="">
+      <img class="ui image centered" src="img/rsvp_btn.png" alt="">
     </div>
   </a>
 
@@ -153,7 +155,136 @@
           <img class="ui centered medium image inn-img" src='img/1774inn.png'>
         </div>
       </div>
+
+      <div style="width: 100%; background-color: #F4F4F8;">
+<section class="cd-horizontal-timeline">
+<div class="timeline">
+<div class="events-wrapper">
+<div class="events">
+<ol>
+
+<li>
+<a href="#0" data-date="01/01/2014" class="selected">
+<img class="ui centered event-nail-s image mts" src='img/event_balloon.png'>
+</a>
+</li>
+<li>
+<a href="#0" data-date="01/03/2014">
+<img class="ui centered event-nail image mts" src='img/event_shuttle.png'>
+</a>
+</li>
+<li>
+<a href="#0" data-date="01/05/2014">
+<img class="ui centered event-nail image mts" src='img/event_rings.png'>
+</a>
+</li>
+<li>
+<a href="#0" data-date="01/07/2014">
+<img class="ui centered event-nail image mts" src='img/event_glass.png'>
+</a>
+</li>
+<li>
+<a href="#0" data-date="01/09/2014">
+<img class="ui centered event-nail image mts" src='img/event_shuttle.png'>
+</a>
+</li>
+<li>
+<a href="#0" data-date="01/11/2014">
+<img class="ui centered event-nail-s image mts" src='img/event_music.png'>
+</a>
+</li>
+<li>
+<a href="#0" data-date="30/12/2014">
+<img class="ui centered event-nail image mts" src='img/event_mug.png'>
+</a>
+</li>
+
+<!-- 
+01/01/2014
+01/03/2014
+01/05/2014
+01/07/2014
+01/09/2014
+01/11/2014
+01/12/2014 
+-->
+
+</ol>
+
+<span class="filling-line" aria-hidden="true"></span>
+</div> <!-- .events -->
+</div> <!-- .events-wrapper -->
+
+<ul class="cd-timeline-navigation">
+<li><a href="#0" class="prev inactive">Prev</a></li>
+<li><a href="#0" class="next">Next</a></li>
+</ul> <!-- .cd-timeline-navigation -->
+</div> <!-- .timeline -->
+
+<div class="events-content">
+<ol>
+<li class="selected" data-date="01/01/2014">
+  <h2 class="med-text">WELCOME PARTY</h2>
+  <div class="ui padded text small-text">
+  <p>Friday, 8:00 PM</p>
+  <p><a class="link-text" href="http://smallpointclub.com/" target="_blank">Small Point Beach Club</a></p>
+  </div>
+</li>
+
+<li data-date="01/03/2014">
+<h2 class="med-text">SHUTTLE</h2>
+<div class="ui padded text small-text">
+<p>Saturday, 2:45 PM</p>
+</div>
+</li>
+
+<li data-date="01/05/2014">
+<h2 class="med-text">CEREMONY</h2>
+<div class="ui padded text small-text">
+<p>Saturday, 3:30 PM</p>
+</div>
+</li>
+
+<li data-date="01/07/2014">
+<h2 class="med-text">RECEPTION</h2>
+<div class="ui padded text small-text">
+<p>Saturday, 4:00 PM</p>
+</div>
+</li>
+
+<li data-date="01/09/2014">
+<h2 class="med-text">SHUTTLE</h2>
+<div class="ui padded text small-text">
+<p>Saturday, 9:30 PM - 10:00 PM</p>
+</div>
+</li>
+
+<li data-date="01/11/2014">
+<h2 class="med-text">AFTER PARTY</h2>
+<div class="ui padded text small-text">
+<p>Saturday, 10:00 PM</p>
+<p><a class="link-text" href="http://byrnesirishpub.com/">Byrne's Pub</a></p>
+</div>
+</li>
+
+<li data-date="30/12/2014">
+<h2 class="med-text">FAREWELL</h2>
+<div class="ui padded text small-text">
+<p>Saturday, 10:00 AM</p>
+<p><a class="link-text" href="http://hamptoninn3.hilton.com/en/hotels/maine/hampton-inn-bath-brunswick-area-me-PWMBAHX/index.html">Bath Hampton Inn Hotel Lobby </a></p>
+</li>
+
+</ol>
+</div> <!-- .events-content -->
+</section>
+</div>
+    
+
+
     </section>
+
+
+
 
     <section class="et-slide" id="tab-react">
       <div class="parallax" ></div>
@@ -247,34 +378,6 @@
     </section>
   </main>
 
-
-
-<!-- RSVP MODAL -->
-<div class="ui modal">
-  <i class="close icon"></i>
-  <div class="header">
-    RSVP
-  </div>
-
-  <div class="image content">
-    <div class="ui medium image">
-      <img src="img/rsvp.png">
-    </div>
-    <div class="description">
-
-      <h2 class="med-text mts"><i class="warning sign icon"></i>Coming soon...</h2>
-    </div>
-  </div>
-  <div class="actions">
-
-    <div class="ui positive right labeled icon button">
-      See you soon!
-      <i class="checkmark icon"></i>
-    </div>
-  </div>
-</div>
-
-
 <!-- PHOTOSWIPE ELEMENTS -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 <div class="pswp__bg"></div>
@@ -324,5 +427,6 @@
 
   <script src="js/nav.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/timeline.js"></script>
 </body>
 </html>
